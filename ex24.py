@@ -19,7 +19,15 @@ def rle_code(data):
             count += 1
     else:
         encoding += prev_char+str(count)
-        return encoding
+    return encoding
+var_1='aaaffffcc'
+with open('file24.enter.txt', 'w') as data:
+    data.write(var_1)
+with open('file24.enter.txt', 'r') as f:
+    enter = f.read()
 
-new_val_rle = rle_code('aaaffffcc')
+new_val_rle = rle_code(enter)
 print(new_val_rle)
+
+with open('file24.exit.txt', 'w') as data:
+    data.write(new_val_rle)
