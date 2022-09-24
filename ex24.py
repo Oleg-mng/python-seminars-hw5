@@ -7,7 +7,7 @@
 def rle_code(data):
     encoding = ''
     prev_char = ''
-    count = 1
+    count = 0
     if not data:
         return ''
     for char in data:
@@ -19,6 +19,8 @@ def rle_code(data):
             count += 1
     else:
         encoding += prev_char+str(count)
+    pos=0 #удаление символа на определенной позиции
+    encoding = encoding[0:pos] + encoding[pos+1:] #удаление символа на определенной позиции
     return encoding
 var_1='aaaffffcc'
 with open('file24.enter.txt', 'w') as data:
